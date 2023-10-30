@@ -49,7 +49,10 @@ class MainActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        val text: String = parent?.getItemAtPosition(position).toString()
+        //val text: String = parent?.getItemAtPosition(position).toString()
+        val spinner:Spinner = findViewById(R.id.spinner)
+        val text: String = spinner.selectedItem.toString()
+
         val textView:TextView = findViewById(R.id.textView)
         textView.text = "Provincia seleccionada: $text"
     }
